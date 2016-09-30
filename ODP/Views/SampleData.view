@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C125803E003F1886'>
+<noteinfo noteid='212' unid='E7A676E9F1180C8AC1258039006A1201' sequence='5'>
+<created><datetime dst='true'>20160925T211834,25+02</datetime></created>
+<modified><datetime dst='true'>20160930T132954,64+02</datetime></modified>
+<revised><datetime dst='true'>20160926T094459,32+02</datetime></revised>
+<lastaccessed><datetime dst='true'>20160930T132959,82+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20160930T132954,64+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
+<wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>SampleData|SampleData</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+ggAFACoAJgAEAAcABgAJAAQAcmVmTmFtZXJlZlN1YiRDb25mbGljdCRSRUYEAAQAAAA+AAUABABG
+b3JtAQAKAFNhbXBsZURhdGEKAgQABQAEAEZvcm0BAAoAU2FtcGxlRGF0YQoCBAAdAgQAAwAHABQA
+DgAJM1M0UzZTN1M5UzEwUw==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+BgAAAABE
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACAAIACAAAAFZDAAAHAAQAAAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAAAYACQAAAAAAUAAB
+AAAKAAAAAAAAAAAAAgIAAAByZWZOYW1lbmFtZXJlZlN1YnN1Yi10aXRsZSYAAQAAAAEBAAkBAAAK
+AQEOCgAAAQCtKwEAAQABAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8A
+AAAAAAAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAA
+AABCAAAAAAABAP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQAA
+AAAAAQAAAAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$SelQuery' sign='true'>
+<rawitemdata type='f'>
+gQYAAAAAif8hAAAAAAABABUAU2FtcGxlRGF0YXxTYW1wbGVEYXRhAA==
+</rawitemdata></item>
+<item name='$Flags'><text>Y</text></item></note>
+

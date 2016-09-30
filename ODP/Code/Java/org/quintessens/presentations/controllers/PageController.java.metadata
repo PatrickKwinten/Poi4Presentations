@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C125803E003F1886" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1fa" sequence="14" unid="1FD105385799C481C125803A004C7FA9">
+<created><datetime dst="true">20160926T155534,17+02</datetime></created>
+<modified><datetime dst="true">20160930T132954,52+02</datetime></modified>
+<revised><datetime dst="true">20160926T163554,99+02</datetime></revised>
+<lastaccessed><datetime dst="true">20160930T132954,52+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20160930T132954,52+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
+<wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>org/quintessens/presentations/controllers/PageController.java</text></item>
+
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>org/quintessens/presentations/controllers/PageController.java</text></item>
+
+</note>

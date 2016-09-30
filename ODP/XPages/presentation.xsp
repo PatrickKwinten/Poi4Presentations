@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.beforePageLoad><![CDATA[#{javascript://From Mark Leusink
+//So it seems that the no-store header actually causes the XPage not to be cached at all 
+//and opening an XPage using the back button had the same effect as initial opening it.
+var response=facesContext.getExternalContext().getResponse();
+response.setHeader("Cache-Control", "no-cache, no-store");
+//---
+	
+var paramUNID = paramValues.get("UNID");
+
+if (paramUNID != null){
+	ReferenceController.reset();
+	//Picture.loadByUnid(paramUNID.toString());
+	ReferenceController.loadByUnid(paramUNID.toString());
+}
+else{
+	//ReferenceController.create();
+}}]]></xp:this.beforePageLoad>
+
+	<div class="container">
+		<div class="jumbotron">
+			<h1>
+				<xp:text escape="true" id="computedField1"
+					value="#{javascript:ReferenceController.name;}">
+				</xp:text>
+			</h1>
+			<p>
+				<xp:text escape="true" id="computedField2"
+					value="#{javascript:ReferenceController.sub;}">
+				</xp:text>
+			</p>
+			<p>
+				<xp:button value="Download as Presentation" id="button1"
+					styleClass="pull-right btn-primary" rendered="false">
+					<i class="fa fa-slideshare" aria-hidden="true"></i>
+					&#160;
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="norefresh">
+						<xp:this.action><![CDATA[#{javascript:sessionScope.docId = ReferenceController.objectId;
+sessionScope.slideType = "TITLE_AND_CONTENT";
+sessionScope.fieldList = ["refName","refSub","refStrength","refWeakness"];
+context.redirectToPage("StreamPresentation.xsp");}]]></xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				
+					<xp:button id="button4" value="Download as Presentation" styleClass="pull-right btn-primary"
+					style="margin-right:5px;"><i class="fa fa-slideshare" aria-hidden="true"></i>
+					&#160;
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete">
+									<xp:this.action><![CDATA[#{javascript:HTML.createPptx(ReferenceController.objectId);}]]></xp:this.action>
+								</xp:eventHandler>
+						</xp:button>
+				</p>
+		</div>
+
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<label>Strength:</label>
+			</div>
+			<div class="col-md-10">
+				<xp:inputText id="inputText1"
+					value="#{javascript:ReferenceController.strength;}">
+					<xp:this.multipleSeparator><![CDATA[#{javascript:"\n"}]]></xp:this.multipleSeparator>
+				</xp:inputText>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<label>Weakness:</label>
+			</div>
+			<div class="col-md-10">
+				<xp:inputText id="inputText2"
+					value="#{javascript:ReferenceController.weakness;}">
+					<xp:this.multipleSeparator><![CDATA[#{javascript:"\n"}]]></xp:this.multipleSeparator>
+				</xp:inputText>
+			</div>
+		</div>
+		<xp:button value="Back to overview" id="button2">
+			<xp:eventHandler event="onclick" submit="true"
+				refreshMode="complete">
+				<xp:this.action>
+					<xp:openPage name="/index.xsp"></xp:openPage>
+				</xp:this.action>
+			</xp:eventHandler>
+		</xp:button>
+	</div>
+
+	</xp:view>

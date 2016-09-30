@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<div class="container">
+		<h2>References</h2>
+		<p>Available reference sheets:</p>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Subtitle</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<xp:repeat id="repeat1" rows="30" var="obj"
+					indexVar="idx">
+					<xp:this.value><![CDATA[#{javascript:ReferenceController.loadObjects("sampleDataJSON", 1);}]]></xp:this.value>
+					<tr>
+						<td>
+
+							<xp:link escape="true"
+								text="#{javascript:obj.refName}" id="link1">
+							<xp:this.value><![CDATA[#{javascript:return "/.ibmxspres/domino/" + database.getFilePath() + "/presentation.xsp?UNID=" + obj.unid}]]></xp:this.value></xp:link>
+						</td>
+						<td>
+							<xp:text escape="true"
+								value="#{javascript:obj.refSub}" />
+						</td>
+						<td>
+						<xp:button id="button2" value="Download as Presentation" styleClass="pull-right btn-primary">
+						<i class="fa fa-slideshare" aria-hidden="true"></i>&#160;
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete">
+									<xp:this.action><![CDATA[#{javascript:HTML.createPptx(obj.unid);}]]></xp:this.action>
+								</xp:eventHandler>
+						</xp:button>							
+						</td>
+					</tr>
+				</xp:repeat>
+			</tbody>
+		</table>
+		<xp:pager layout="Previous Group Next" partialRefresh="true"
+			id="pager1" for="repeat1">
+		</xp:pager>
+	</div>
+	</xp:view>
